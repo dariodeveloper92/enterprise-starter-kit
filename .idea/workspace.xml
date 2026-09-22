@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44967953-6d2d-4820-81b3-fe8a4bd3ca64" name="Changes" comment="Configurato pom">
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/dto/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/service/AuthServiceImpl.java" afterDir="false" />
+    <list default="true" id="44967953-6d2d-4820-81b3-fe8a4bd3ca64" name="Changes" comment="Configurato Security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/auth-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/auth-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/auth-api/src/main/java/com/dario/enterprise/authapi/security/JwtService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/auth-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/auth-api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,11 +127,29 @@
       <option name="project" value="LOCAL" />
       <updated>1790086599579</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Configurato Componenti">
+      <option name="closed" value="true" />
+      <created>1790093868674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1790093868674</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Configurato Security">
+      <option name="closed" value="true" />
+      <created>1790095388041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1790095388041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Configurato pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configurato pom" />
+    <MESSAGE value="Configurato Componenti" />
+    <MESSAGE value="Configurato Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configurato Security" />
   </component>
 </project>
