@@ -6,6 +6,7 @@ import com.dario.enterprise.authapi.entity.Role;
 import com.dario.enterprise.authapi.entity.User;
 import com.dario.enterprise.authapi.repository.RoleRepository;
 import com.dario.enterprise.authapi.repository.UserRepository;
+import com.dario.enterprise.authapi.security.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +18,14 @@ public class AuthServiceImpl implements AuthService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
+    private final JwtService jwtService;
 
-    public AuthServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder) {
+
+    public AuthServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder, JwtService jwtService) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
+        this.jwtService = jwtService;
     }
 
     @Override
@@ -44,6 +48,14 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public String login(LoginRequest request) {
-        return "JWT_TOKEN_PLACEHOLDER";
+        var user = userRepository.findByEmail(request.email())
+                .orElseThrow(() -> new RuntimeException("Invalid credentials"));
+
+        if (!passwordEncoder.matches(request.password(), user.getPassword())) {
+            throw new RuntimeException("Invalid credentials");
+        }
+
+        return jwtService.generateToken(user.getEmail());
     }
+
 }
